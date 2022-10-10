@@ -1,6 +1,7 @@
 package Application;
 
 import Boardgame.BoardException;
+import Chess.ChessMatch;
 import Chess.ChessPiece;
 import Chess.ChessPosition;
 import Chess.Color;
@@ -58,6 +59,14 @@ public class UI {
         }
         System.out.print("  A B C D E F G H ");
     }
+
+    public static void printMatch(ChessMatch chessMatch){
+        printBoard(chessMatch.getPieces());
+        System.out.println();
+        System.out.println("Turn: " + chessMatch.getTurn());
+        System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
+    }
+
     public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves){
         for (int i = 0;i< pieces.length;i++){
             System.out.print((8 - i) + " ");
