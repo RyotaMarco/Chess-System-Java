@@ -95,7 +95,7 @@ public class UI {
             System.out.print(ANSI_RED_BACKGROUND);
         }
         if (piece == null) {
-            System.out.print("-");
+            System.out.print("-" + ANSI_RESET);
         }
         else {
             if (piece.getColor() == Color.WHITE) {
